@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatTableModule } from '@angular/material/table' 
+import { MatTableModule } from '@angular/material/table'
 import { TechnologyModule } from './technology/technology.module';
+import { MatCardModule } from '@angular/material/card';
  
+
 
 
 @NgModule({
@@ -20,8 +22,9 @@ import { TechnologyModule } from './technology/technology.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    TechnologyModule,
-    MatTableModule
+    MatTableModule,
+    MatCardModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
