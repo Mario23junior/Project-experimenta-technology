@@ -1,1 +1,17 @@
-<p>technologys works!</p>
+<table mat-table [dataSource]="languagems" class="mat-elevation-z9">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Nome </th>
+        <td mat-cell *matCellDef="let tecn"> {{ tecn.name }} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="category">
+        <th mat-header-cell *matHeaderCellDef> Categoria </th>
+        <td mat-cell *matCellDef="let tecn"> {{ tecn.category }} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

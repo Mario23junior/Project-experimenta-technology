@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Technology } from '../model/technology';
 
 @Component({
   selector: 'app-technologys',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TechnologysComponent implements OnInit {
 
-  constructor() { }
+  languagems: Technology[] = [
+    { _id: '1', name: 'angular', category: 'front-end' }
+  ]
+  displayedColumns = ['name', 'category']
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

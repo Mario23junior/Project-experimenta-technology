@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { TechnologyRoutingModule } from './technology-routing.module';
 import { TechnologysComponent } from './technologys/technologys.component';
+import { MatTableModule } from '@angular/material/table'  
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { TechnologysComponent } from './technologys/technologys.component';
   ],
   imports: [
     CommonModule,
-    TechnologyRoutingModule
+    TechnologyRoutingModule,
+    MatTableModule
   ]
 })
 export class TechnologyModule { }
