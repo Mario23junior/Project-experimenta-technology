@@ -9,11 +9,15 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { CategoryPipe } from '../shared/pipes/category.pipe';
+
 
 
 @NgModule({
   declarations: [
-    TechnologysComponent
+    CategoryPipe,
+    TechnologysComponent,
   ],
   imports: [
     CommonModule,
@@ -23,7 +27,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatToolbarModule,
     MatProgressSpinnerModule,
     MatDialogModule,
-    MatButtonModule
-  ]
+    MatButtonModule,
+    MatIconModule  
+   ]
 })
 export class TechnologyModule { }

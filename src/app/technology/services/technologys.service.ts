@@ -9,7 +9,7 @@ import { delay, first, take, tap } from 'rxjs';
 export class TechnologysService {
 
   private httpClient: HttpClient
-  private readonly API = '/assets/db2.json'
+  private readonly API = '/assets/db.json'
 
   constructor(httpClient: HttpClient) {
     this.httpClient = httpClient
@@ -19,7 +19,6 @@ export class TechnologysService {
     return this.httpClient.get<Technology[]>(this.API)
       .pipe(
         first(),
-        delay(5000),
         tap(linguagens => console.log(linguagens))
       )
   }

@@ -14,7 +14,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ErrorDialogComponent } from './shared/components/error-dialog/error-dialog.component'
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
-
+import { MatIconModule } from '@angular/material/icon';
+ 
 
 @NgModule({
   declarations: [
@@ -31,7 +32,10 @@ import { MatButtonModule } from '@angular/material/button';
     HttpClientModule,
     MatProgressSpinnerModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
+
+
 
   ],
   providers: [],
