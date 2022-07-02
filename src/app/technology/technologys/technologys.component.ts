@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Technology } from '../model/technology';
+import { TechnologysService } from '../services/technologys.service';
 
 @Component({
   selector: 'app-technologys',
@@ -8,12 +9,14 @@ import { Technology } from '../model/technology';
 })
 export class TechnologysComponent implements OnInit {
 
-  languagems: Technology[] = [
-    { _id: '1', name: 'angular', category: 'front-end' }
-  ]
+  languagems: Technology[] = []
   displayedColumns = ['name', 'category']
 
-  constructor() {
+  private technologysService: TechnologysService;
+
+  constructor(technologysService: TechnologysService) {
+    this.technologysService = technologysService
+    this.languagems = this.technologysService.list()
   }
 
   ngOnInit(): void {

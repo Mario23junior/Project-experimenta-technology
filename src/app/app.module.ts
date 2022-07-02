@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,9 +11,6 @@ import { MatTableModule } from '@angular/material/table'
 import { TechnologyModule } from './technology/technology.module';
 import { MatCardModule } from '@angular/material/card';
  
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +21,8 @@ import { MatCardModule } from '@angular/material/card';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatTableModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
 
   ],
   providers: [],
