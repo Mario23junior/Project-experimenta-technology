@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Technology } from '../model/technology';
 import { TechnologysService } from '../services/technologys.service';
 
@@ -9,7 +10,7 @@ import { TechnologysService } from '../services/technologys.service';
 })
 export class TechnologysComponent implements OnInit {
 
-  languagems: Technology[] = []
+  languagems: Observable<Technology[]>;
   displayedColumns = ['name', 'category']
 
   private technologysService: TechnologysService;

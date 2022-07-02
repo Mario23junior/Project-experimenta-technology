@@ -8,14 +8,13 @@ import { HttpClient } from '@angular/common/http'
 export class TechnologysService {
 
   private httpClient: HttpClient
+  private readonly API = '/assets/db.json'
 
   constructor(httpClient: HttpClient) {
     this.httpClient = httpClient
   }
 
-  list(): Technology[] {
-    return [
-      { _id: '1', name: 'angular', category: 'front-end' }
-    ]
+  list() {
+    return this.httpClient.get<Technology[]>(this.API)
   }
 }
