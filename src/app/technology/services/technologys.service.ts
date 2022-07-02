@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Technology } from '../model/technology';
 import { HttpClient } from '@angular/common/http'
-import { first, take, tap } from 'rxjs';
+import { delay, first, take, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +19,7 @@ export class TechnologysService {
     return this.httpClient.get<Technology[]>(this.API)
     .pipe(
       first(),
+      delay(5000),
       tap(linguagens => console.log(linguagens))
     )
   }

@@ -10,7 +10,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTableModule } from '@angular/material/table'
 import { TechnologyModule } from './technology/technology.module';
 import { MatCardModule } from '@angular/material/card';
- 
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { MatCardModule } from '@angular/material/card';
     MatToolbarModule,
     MatTableModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatProgressSpinnerModule
 
   ],
   providers: [],

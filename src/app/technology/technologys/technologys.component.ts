@@ -10,14 +10,14 @@ import { TechnologysService } from '../services/technologys.service';
 })
 export class TechnologysComponent implements OnInit {
 
-  languagems: Observable<Technology[]>;
+  languagems$: Observable<Technology[]>;
   displayedColumns = ['name', 'category']
 
   private technologysService: TechnologysService;
 
   constructor(technologysService: TechnologysService) {
     this.technologysService = technologysService
-    this.languagems = this.technologysService.list()
+    this.languagems$ = this.technologysService.list()
   }
 
   ngOnInit(): void {
