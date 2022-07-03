@@ -13,7 +13,7 @@ import { TechnologysService } from '../services/technologys.service';
 export class TechnologysComponent implements OnInit {
 
   languagems$: Observable<Technology[]>;
-  displayedColumns = ['name', 'category']
+  displayedColumns = ['name', 'category','actions']
 
   private technologysService: TechnologysService;
   public dialog: MatDialog
