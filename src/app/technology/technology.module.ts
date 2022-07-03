@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { TechnologyRoutingModule } from './technology-routing.module';
 import { TechnologysComponent } from './technologys/technologys.component';
-import { MatTableModule } from '@angular/material/table'  
+import { MatTableModule } from '@angular/material/table'
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
@@ -12,7 +12,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { CategoryPipe } from '../shared/pipes/category.pipe';
 import { TechologyFormComponent } from './techology-form/techology-form.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from'@angular/material/input';
 
 
 @NgModule({
@@ -30,7 +32,11 @@ import { TechologyFormComponent } from './techology-form/techology-form.componen
     MatProgressSpinnerModule,
     MatDialogModule,
     MatButtonModule,
-    MatIconModule  
-   ]
+    MatIconModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule
+    
+  ]
 })
 export class TechnologyModule { }
