@@ -22,4 +22,12 @@ export class TechologyFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit() {
+
+  }
+
+  onCancel() {
+    
+  }
+
 }
