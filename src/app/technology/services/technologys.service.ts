@@ -9,7 +9,7 @@ import { delay, first, take, tap } from 'rxjs';
 export class TechnologysService {
 
   private httpClient: HttpClient
-  private readonly API = '/assets/db.json'
+  private readonly API = 'api/technology'
 
   constructor(httpClient: HttpClient) {
     this.httpClient = httpClient
