@@ -24,7 +24,7 @@
             <ng-container matColumnDef="actions">
                 <mat-header-cell *matHeaderCellDef>
                     <button mat-icon-button color="accent" aria-label="Example icon button with a delete icon">
-                        <mat-icon>add</mat-icon>
+                        <mat-icon (click)="onAdd()">add</mat-icon>
                     </button>
 
                     <button  mat-icon-button color="warn" aria-label="Example icon button with a home icon">

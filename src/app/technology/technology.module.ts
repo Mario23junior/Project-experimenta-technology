@@ -11,6 +11,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { CategoryPipe } from '../shared/pipes/category.pipe';
+import { TechologyFormComponent } from './techology-form/techology-form.component';
 
 
 
@@ -18,6 +19,7 @@ import { CategoryPipe } from '../shared/pipes/category.pipe';
   declarations: [
     CategoryPipe,
     TechnologysComponent,
+    TechologyFormComponent,
   ],
   imports: [
     CommonModule,

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, Observable, of } from 'rxjs';
 import { ErrorDialogComponent } from 'src/app/shared/components/error-dialog/error-dialog.component';
 import { Technology } from '../model/technology';
@@ -13,14 +14,19 @@ import { TechnologysService } from '../services/technologys.service';
 export class TechnologysComponent implements OnInit {
 
   languagems$: Observable<Technology[]>;
-  displayedColumns = ['name', 'category','actions']
+  displayedColumns = ['name', 'category', 'actions']
 
   private technologysService: TechnologysService;
   public dialog: MatDialog
+  private router: Router
+  private route:ActivatedRoute
 
-  constructor(technologysService: TechnologysService,dialog: MatDialog) {
+
+  constructor(technologysService: TechnologysService, dialog: MatDialog, router: Router,route:ActivatedRoute) {
     this.technologysService = technologysService
     this.dialog = dialog
+    this.router = router
+    this.route = route
     this.languagems$ = this.technologysService.list()
       .pipe(
         catchError(error => {
@@ -39,4 +45,7 @@ export class TechnologysComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onAdd() {
+    return this.router.navigate(['new'],{relativeTo:this.route})
+  }
 }
