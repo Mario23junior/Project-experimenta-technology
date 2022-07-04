@@ -49,7 +49,7 @@ export class TechologyFormComponent implements OnInit {
 
   private onSuccess() {
     this.snackBar.open('Tecnlogia salva com sucesso !', '',
-      { duration: 5000, panelClass: ['mat-toolbar', 'mat-Accent'] })
+      { duration: 5000, panelClass: ['mat-toolbar', 'mat-accent'] })
       this.onCancel()
   }
 
