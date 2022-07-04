@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Technology } from '../model/technology';
 import { HttpClient } from '@angular/common/http'
 import { delay, first, take, tap } from 'rxjs';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +11,11 @@ export class TechnologysService {
 
   private httpClient: HttpClient
   private readonly API = 'api/technology'
+  private snackBar: MatSnackBar
 
-  constructor(httpClient: HttpClient) {
+  constructor(httpClient: HttpClient, snackBar: MatSnackBar) {
     this.httpClient = httpClient
+    this.snackBar = snackBar
   }
 
   list() {
