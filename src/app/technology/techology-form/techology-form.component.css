@@ -17,6 +17,6 @@ mat-card-content {
     min-width: 150px;
 }
 
-.mat-form-field {
-    margin-right: 34px;
+.snackBar-color{
+ background:red;
 }

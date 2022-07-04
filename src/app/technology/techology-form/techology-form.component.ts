@@ -30,7 +30,9 @@ export class TechologyFormComponent implements OnInit {
   }
 
   onSubmit() {
-    this.service.save(this.form.value).subscribe(result => console.log(result), error => this.onError())
+    this.service.save(this.form.value)
+      .subscribe(result => console.log(result),
+        error => this.onError())
   }
 
   onCancel() {
@@ -38,8 +40,8 @@ export class TechologyFormComponent implements OnInit {
   }
 
   private onError() {
-    this.snackBar.open('Erro ao salvar cursos', '', { duration: 5000 })
-
+    this.snackBar.open('Erro ao salvar uma nova tecnologia,por favor tente mais tarde', '',
+      { duration: 5000, panelClass: ['mat-toolbar', 'mat-warn'] })
   }
 
 }
