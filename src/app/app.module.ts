@@ -18,7 +18,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
- 
+import { MatSelectModule } from '@angular/material/select';
+
 
 @NgModule({
   declarations: [
@@ -39,8 +40,9 @@ import { MatInputModule } from '@angular/material/input';
     MatIconModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatInputModule
-   ],
+    MatInputModule,
+    MatSelectModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

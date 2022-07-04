@@ -22,4 +22,9 @@ export class TechnologysService {
         tap(linguagens => console.log(linguagens))
       )
   }
+
+  save(record:Technology) {
+   return this.httpClient.post<Technology>(this.API, record)
+   .pipe(first())
+  }
 }
